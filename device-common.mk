@@ -87,7 +87,8 @@ PRODUCT_PACKAGES += \
     qrtr-cfg \
     qrtr-lookup \
     rmtfs \
-    tqftpserv
+    tqftpserv \
+    qrtr-rild
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/qcom/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qcom.rc
