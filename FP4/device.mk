@@ -17,13 +17,9 @@
 PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/fstab.ramdisk:$(TARGET_COPY_OUT_RAMDISK)/fstab.FP4 \
     $(LOCAL_PATH)/fstab.ramdisk:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.FP4 \
-    device/generic/sdm845/etc/audio.sdm845.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio.FP4.xml \
     device/generic/sdm845/init.common.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.FP4.rc \
     device/generic/sdm845/init.common.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.FP4.usb.rc \
     device/generic/sdm845/common.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/axolotl.kl
-
-# Audio
-PRODUCT_PACKAGES += audio.primary.FP4
 
 # Lights
 PRODUCT_PACKAGES += lights.FP4
