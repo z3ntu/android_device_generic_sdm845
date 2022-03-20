@@ -21,9 +21,6 @@ PRODUCT_COPY_FILES := \
     device/generic/sdm845/shared/init.sdm845.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.FP4.usb.rc \
     device/generic/sdm845/shared/key_layout.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/axolotl.kl
 
-# Audio
-PRODUCT_PACKAGES += audio.primary.FP4
-
 # Dynamic Partitions
 PRODUCT_BUILD_SUPER_PARTITION := true
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
