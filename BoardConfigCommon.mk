@@ -41,6 +41,7 @@ BOARD_KERNEL_CMDLINE     := console=ttyMSM0,115200n8 console=tty0 androidboot.co
 BOARD_KERNEL_CMDLINE     += androidboot.boot_devices=soc@0/1d84000.ufs
 BOARD_KERNEL_CMDLINE     += firmware_class.path=/vendor/firmware/ init=/init printk.devkmsg=on
 BOARD_KERNEL_CMDLINE     += deferred_probe_timeout=30
+BOARD_KERNEL_CMDLINE     += androidboot.selinux=permissive
 
 # Image Configuration
 BOARD_FLASH_BLOCK_SIZE := 262144

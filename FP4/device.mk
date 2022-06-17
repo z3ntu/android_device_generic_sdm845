@@ -21,13 +21,19 @@ PRODUCT_COPY_FILES := \
     device/generic/sdm845/init.common.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.FP4.usb.rc \
     device/generic/sdm845/common.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/axolotl.kl
 
+# Recovery
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/fstab.ramdisk
+
 # Lights
 PRODUCT_PACKAGES += lights.FP4
 
 # Boot control
 PRODUCT_PACKAGES += \
+    android.hardware.boot@1.1-impl-qti \
     android.hardware.boot@1.1-impl-qti.recovery \
-    bootctrl.lahaina.recovery
+    android.hardware.boot@1.1-service \
+    bootctrl.FP4 \
+    bootctrl.FP4.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
