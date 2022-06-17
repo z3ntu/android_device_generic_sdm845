@@ -30,7 +30,7 @@ TARGET_USES_64_BIT_BINDER := true
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_KERNEL := false
-TARGET_NO_RECOVERY := true
+#TARGET_NO_RECOVERY := true
 
 # Kernel/boot.img Configuration
 BOARD_KERNEL_BASE        := 0x00000000

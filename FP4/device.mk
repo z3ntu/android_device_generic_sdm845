@@ -24,6 +24,14 @@ PRODUCT_COPY_FILES := \
 # Lights
 PRODUCT_PACKAGES += lights.FP4
 
+# Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.1-impl-qti.recovery \
+    bootctrl.lahaina.recovery
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
+
 # Dynamic Partitions
 PRODUCT_BUILD_SUPER_PARTITION := true
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
