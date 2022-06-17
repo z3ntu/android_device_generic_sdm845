@@ -25,6 +25,20 @@ BOARD_FP4_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     system_ext \
     vendor \
 
+# A/B
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    odm \
+    product \
+    recovery \
+    system \
+    system_ext \
+    vbmeta \
+    vbmeta_system \
+    vendor
+
 # Set error limit to BOARD_SUPER_PARTITON_SIZE - 500MB
 #BOARD_SUPER_PARTITION_ERROR_LIMIT := 12360613888
 
