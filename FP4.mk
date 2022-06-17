@@ -17,7 +17,11 @@ $(call inherit-product, device/generic/sdm845/FP4/device.mk)
 $(call inherit-product, device/generic/sdm845/device-common.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
+# Enable virtual A/B OTA
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
 # Product overrides
 PRODUCT_NAME := FP4
 PRODUCT_DEVICE := FP4
 PRODUCT_BRAND := AOSP
+PRODUCT_SHIPPING_API_LEVEL := 30
