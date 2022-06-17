@@ -22,6 +22,7 @@ on init
     write /dev/cpuset/background/cpus 0-7
     write /dev/cpuset/system-background/cpus 0-7
     write /dev/cpuset/top-app/cpus 0-7
+    symlink /dev/block/platform/${ro.boot.boot_devices} /dev/block/bootdevice
 
 on early-boot
     mount debugfs debugfs /sys/kernel/debug
