@@ -4,8 +4,6 @@ include device/generic/sdm845/BoardConfigCommon.mk
 TARGET_BOOTLOADER_BOARD_NAME := FP4
 TARGET_BOARD_PLATFORM := FP4
 
-TARGET_SCREEN_DENSITY := 440
-
 # Kernel/boot.img Configuration
 BOARD_KERNEL_CMDLINE += androidboot.hardware=FP4
 BOARD_KERNEL_CMDLINE += sdhci.debug_quirks=0x40

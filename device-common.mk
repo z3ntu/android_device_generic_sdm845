@@ -55,6 +55,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.gralloc=minigbm_msm \
     ro.hardware.hwcomposer=drm \
     debug.sf.no_hw_vsync=1 \
+    ro.sf.lcd_density=400 \
     ro.opengles.version=196609
 
 #
