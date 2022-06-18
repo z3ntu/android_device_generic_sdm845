@@ -19,10 +19,14 @@ PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/fstab.ramdisk:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.FP4 \
     device/generic/sdm845/shared/init.sdm845.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.FP4.rc \
     device/generic/sdm845/shared/init.sdm845.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.FP4.usb.rc \
+    device/generic/sdm845/shared/init.recovery.sdm845.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.FP4.rc \
     device/generic/sdm845/shared/key_layout.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/axolotl.kl
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/fstab.ramdisk
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_RECOVERY_UI_MARGIN_HEIGHT := 50
+TARGET_RECOVERY_UI_MARGIN_WIDTH := 10
 
 # Boot control
 PRODUCT_PACKAGES += \
@@ -34,6 +38,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
+
+# Recovery
+PRODUCT_PACKAGES += \
+    fastbootd
 
 # Dynamic Partitions
 PRODUCT_BUILD_SUPER_PARTITION := true
