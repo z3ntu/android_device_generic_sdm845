@@ -16,12 +16,17 @@ on post-fs
     write /sys/class/remoteproc/remoteproc1/state start
     write /sys/class/remoteproc/remoteproc2/state start
 
+on early-init
+    # Use ueventd for firmware loading
+    write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
+
 on init
     # Initialize cpusets to boot-time values
     write /dev/cpuset/foreground/cpus 0-7
     write /dev/cpuset/background/cpus 0-7
     write /dev/cpuset/system-background/cpus 0-7
     write /dev/cpuset/top-app/cpus 0-7
+    #symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     symlink /dev/block/platform/${ro.boot.boot_devices} /dev/block/bootdevice
 
 on early-boot

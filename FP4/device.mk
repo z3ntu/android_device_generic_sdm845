@@ -19,10 +19,14 @@ PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/fstab.ramdisk:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.FP4 \
     device/generic/sdm845/init.common.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.FP4.rc \
     device/generic/sdm845/init.common.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.FP4.usb.rc \
+    device/generic/sdm845/init.recovery.common.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.FP4.rc \
     device/generic/sdm845/common.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/axolotl.kl
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/fstab.ramdisk
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+TARGET_RECOVERY_UI_MARGIN_HEIGHT := 50
+TARGET_RECOVERY_UI_MARGIN_WIDTH := 10
 
 # Lights
 PRODUCT_PACKAGES += lights.FP4
