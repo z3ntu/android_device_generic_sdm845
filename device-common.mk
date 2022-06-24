@@ -58,6 +58,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.no_hw_vsync=1 \
     ro.opengles.version=196609
 
+# FIXME update deqp level 2021-03-01?
+PRODUCT_COPY_FILES += \
+	frameworks/native/data/etc/android.software.opengles.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml
+
 # Vulkan
 PRODUCT_PACKAGES += \
 	vulkan.freedreno
